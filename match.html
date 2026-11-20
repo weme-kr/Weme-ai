@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>맞춤 강사 추천 | 위미(weme)</title>
+<meta name="description" content="조직 규모·수강 대상·원하는 주제를 입력하면 맞춤 강사 3인을 추천하고, 견적서와 사내 결재용 품의서를 바로 만들어 드립니다.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/match.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <a class="logo" href="index.html">
+      <span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h9A2.5 2.5 0 0 1 17 5.5v6a2.5 2.5 0 0 1-2.5 2.5H9l-4 3v-3h.5A2.5 2.5 0 0 1 3 11.5z" fill="#fff"/><circle cx="7.5" cy="8.6" r="1.1" fill="#0d7680"/><circle cx="12.5" cy="8.6" r="1.1" fill="#0d7680"/></svg></span>
+      <span>weme <small>맞춤 강사 추천</small></span>
+    </a>
+    <a class="home" href="index.html">서비스 소개</a>
+  </header>
+  <nav class="steps" id="steps" aria-label="진행 단계"><span>1 기업 정보</span><span>2 인원·일정</span><span>3 원하는 교육</span><span>4 추천·서류</span></nav>
+
+  <section class="screen on" id="s-chat">
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="dock" id="dock"></div>
+  </section>
+  <section class="screen" id="s-results"><div class="pad" id="results"></div></section>
+  <section class="screen" id="s-detail"><div class="pad" id="detail"></div></section>
+  <section class="screen" id="s-docs"><div class="pad" id="docs"></div></section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/match.js"></script>
+</body>
+</html>

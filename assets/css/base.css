@@ -1,0 +1,40 @@
+/* weme 공통 디자인 토큰 — 따뜻한 미색 바탕, 딥 틸(주색), 클라렛(강조), IBM Plex Sans KR */
+:root{
+  --bg:#fbf6f2;--panel:#ffffff;--ink:#1a1817;--sub:#6b6460;--line:#ece4de;
+  --teal:#0d7680;--teal-soft:#e3f2f3;--claret:#990f3d;--claret-soft:#fbe9ef;--bot:#f4efea;--on:#ffffff;
+  --radius:18px;--max:1120px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141617;--panel:#1d2022;--ink:#eceae7;--sub:#a39e99;--line:#2e3235;
+    --teal:#3fb5bf;--teal-soft:#183236;--claret:#ff7aa3;--claret-soft:#3a1b26;--bot:#25292b;--on:#0b1314;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141617;--panel:#1d2022;--ink:#eceae7;--sub:#a39e99;--line:#2e3235;
+  --teal:#3fb5bf;--teal-soft:#183236;--claret:#ff7aa3;--claret-soft:#3a1b26;--bot:#25292b;--on:#0b1314;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans KR","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;overflow-x:clip;word-break:keep-all}
+button,input,textarea,select{font:inherit;color:inherit}
+a{color:inherit}
+img,svg{max-width:100%}
+
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:var(--teal);display:grid;place-items:center;flex:none}
+.logo small{font-weight:500;color:var(--sub);font-size:13px}
+
+.cta{appearance:none;border:0;background:var(--teal);color:var(--on);border-radius:14px;min-height:52px;padding:0 24px;font-weight:600;font-size:17px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center}
+.cta:hover{filter:brightness(1.08)}
+.cta:disabled{opacity:.45;cursor:default}
+.ghost{appearance:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;min-height:44px;padding:0 16px;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center}
+.ghost:hover{border-color:var(--teal)}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--teal) 45%,transparent);outline-offset:2px}
+
+.badge{display:inline-block;font-size:12px;font-weight:600;color:var(--claret);background:var(--claret-soft);border-radius:999px;padding:2px 9px;vertical-align:middle;white-space:nowrap}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
